@@ -8,6 +8,7 @@ This project implements an `AccessService` that allows users to request temporar
 
 ## Output
 
+<img width="1146" height="112" alt="image" src="https://github.com/user-attachments/assets/1f84d386-2bb9-410d-842f-fa727ccf446f" />
 
 
 ## Prerequisites
