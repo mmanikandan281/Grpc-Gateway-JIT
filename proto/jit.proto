@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+package jit;
+
+option go_package = "jit.io;jit";
+
+import "google/api/annotations.proto";
+
+service AccessService {
+  rpc RequestAccess (AccessRequest) returns (AccessResponse) {
+    option (google.api.http) = {
+      post: "/v1/access/request"
+      body: "*"
+    };
+  }
+}
+
+message AccessRequest {
+  string userId = 1;
+  string role = 2;
+  int32 durationMinutes = 3;
+  string justification = 4;
+}
+
+message AccessResponse {
+  string requestId = 1;
+  string status = 2;
+}

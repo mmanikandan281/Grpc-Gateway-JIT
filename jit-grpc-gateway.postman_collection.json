@@ -1,0 +1,34 @@
+{
+  "info": {
+    "name": "JIT gRPC Gateway",
+    "_postman_id": "eaf6f4c0-5b9c-11ee-8c99-0242ac120002",
+    "description": "Postman collection to test the JIT AccessService via gRPC-Gateway REST API.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Request Access",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"userId\": \"user1\",\n  \"role\": \"admin\",\n  \"durationMinutes\": 30,\n  \"justification\": \"Need temporary access\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/v1/access/request",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["v1", "access", "request"]
+        }
+      },
+      "response": []
+    }
+  ]
+}
